@@ -27,10 +27,6 @@ module.exports.displaySurvey3Page = (req, res, next) => {
     res.render('content/surveys/survey3', { title: 'Survey3', displayName: req.user? req.user.emailAddress: '' });
 }
 
-module.exports.displaySurveyListPage= (req, res, next) => {
-    res.render('content/list-survey',{ title: 'Available Surveys', displayName: req.user? req.user.emailAddress: '' });
-}
-
 module.exports.displayLoginPage = (req, res, next) => {
     if (!req.user) {    // If user not logged in
         res.render('auth/login', 
