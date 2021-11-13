@@ -4,27 +4,451 @@
 <%- include ../../partials/login_nav.ejs %>
 
 <div class="container-fluid btn-light p-5">
-    <!-- <form method="POST"> -->
-<div class="input-group">
-    <p>Question 1</p><br>
-    <div class="input-group-prepend">
-      <div class="input-group-text">
-      <input type="radio" aria-label="Radio button for following text input">
+
+  <h1 class="display-4">Coronavirus Leadership Check-In</h1><br>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold">1. How worried are you about the impact of coronavirus on you personally?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Extremely worried 
+        </label>
       </div>
-    </div>
-    <br>
-    <!-- <input type="text" class="form-control" aria-label="Text input with radio button"> -->
-    <label>option 1</label>
-    <div class="input-group-prepend">
-        <div class="input-group-text">
-        <input type="radio" aria-label="Radio button for following text input">
-        </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Very worried 
+        </label>
       </div>
-      <!-- <input type="text" class="form-control" aria-label="Text input with radio button"> -->
-      <label>option 1</label>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not so worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not at all worried 
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
   </div>
 
-  <a class="btn btn-primary btn-lg" href="/template" role="button">Create Survey</a>
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold">2. How worried are you about the impact of coronavirus on your company?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Extremely worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Very worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not so worried 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not at all worried 
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold">3. How easy or difficult is it for you to work effectively these days?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Very easy 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Somewhat easy  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Neither easy nor difficult 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat difficult  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Very difficult 
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class="px-4" action="">
+      <p class="fw-bold">4. What are the TOP THREE biggest challenges you are currently facing while working remotely?</p>
+
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+          Internet connectivity 
+        </label>
+      </div>
+  
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          Social isolation 
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          Communication with coworkers is harder  
+        </label>
+      </div>
+
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          Getting enough food  
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          Too many distractions at home  
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          I’m sick or helping others who are sick   
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          My physical workspace  
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          Keeping a regular schedule   
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          I don’t have access to the tools or information I need to do my job at home 
+        </label>
+      </div>
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+        <label class="form-check-label" for="flexCheckDefault2">
+          General anxiety about the impact of coronavirus on my life 
+        </label>
+      </div>
+      
+      
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+        <label class="form-check-label" for="flexCheckDefault3">
+          Other 
+        </label>
+      </div>
+    </form>
+    <!-- <div class="card-footer text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold">5. Thinking about your current work from home arrangements, how long is this something you could comfortably maintain?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          It’s not sustainable now 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          One week
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          A few weeks  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          About a month  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Two months 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Three or more months  
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold">6. How often would you like the leadership team to communicate how your company will handle business complications due to coronavirus?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Every day   
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          A few times a week 
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          About once a week  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Less often than that 
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold"> 7. How confident are you in the company's leadership team to make the right decisions to manage through this crisis?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Extremely confident   
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Very confident
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat confident    
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not so confident  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not confident at all  
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold"> 8. How confident are you that you have the right resources and benefits from your company to help support you through this period?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Extremely confident   
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Very confident
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat confident    
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not so confident  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not confident at all  
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="row col-5">
+    <h4 class="fw-bold text-center mt-3"></h4>
+    <form class=" bg-white px-4" action="">
+      <p class="fw-bold"> 9. Outside of work, how confident are you that you have the right support network to help you through this period?</p>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+        <label class="form-check-label" for="radioExample1">
+          Extremely confident   
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+        <label class="form-check-label" for="radioExample2">
+          Very confident
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Somewhat confident    
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not so confident  
+        </label>
+      </div>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+        <label class="form-check-label" for="radioExample3">
+          Not confident at all  
+        </label>
+      </div>
+    </form>
+    <!-- <div class="text-end">
+      <button type="button" class="btn btn-primary">Submit</button>
+    </div> -->
+  </div>
+
+  <div class="mx-0 mx-sm-auto">
+    <div class="card">
+      <div class="card-body">
+  
+  
+        <form class="px-2" action="">
+          <p class="text-left"><strong>10. Do you have any other comments, questions, or concerns?</strong></p>
+  
+          <!-- Message input -->
+          <div class="form-outline mb-4">
+            <textarea class="form-control" id="form4Example6" rows="4"></textarea>
+          </div>
+        </form>
+      </div>
+      <!-- <div class="card-footer text-end">
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div> -->
+    </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" value="Create">
+  <a type="button" class="btn btn-secondary" href="/template">Cancel</a>
 <!-- </form> -->
 </div>
 
