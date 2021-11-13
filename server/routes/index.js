@@ -51,4 +51,6 @@ router.post('/register', indexController.processRegisterPage);
 /* GET logout page. */
 router.get('/logout', indexController.performLogout);
 
+router.get('/list-survey',indexController.displaySurveyListPage);
+
 module.exports = router;
