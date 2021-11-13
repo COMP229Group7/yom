@@ -1,0 +1,40 @@
+<%- include ../../partials/header.ejs %>
+
+<%- include ../../partials/top_nav.ejs %>
+<%- include ../../partials/login_nav.ejs %>
+
+  <!-- content -->
+
+   <!-- message area -->
+   <% if(messages.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= messages %>
+    </div>
+  <% } %>
+
+<div class="container-fluid btn-light p-5">
+  <h4>Edit User</h4>
+    <form method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address (username):</label>
+          <input type="email" class="form-control" name="emailAddress" aria-describedby="emailHelp" value="<%= User.emailAddress %>" readonly>
+          <small id="emailHelp" class="form-text text-muted">You cannot edit the email address that you have registered with us. This is also your unique username.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleContactName1">Contact name:</label>
+            <input type="text" class="form-control" name="contactName" value="<%= User.contactName %>">
+        </div>
+        <div class="form-group">
+            <label for="exampleContactNumber1">Contact number:</label>
+            <input type="text" class="form-control" name="contactNumber" value="<%= User.contactNumber %>">
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Update">
+        <a type="button" class="btn btn-secondary" href="/users">Cancel</a>
+        <a type="button" class="btn btn-danger" href="/users/delete/<%= id %>">Delete User</a>
+      </form>
+</div>
+
+   
+<%- include ../../partials/bottom_nav.ejs %>
+<%- include ../../partials/footer.ejs %>

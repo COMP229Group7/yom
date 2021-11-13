@@ -1,0 +1,37 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/top_nav.ejs %>
+<%- include ../partials/login_nav.ejs %>
+
+  <!-- content -->
+  <!-- message area -->
+  <% if(messages.length > 0) { %>
+    <div class="alert alert-danger">
+      <%= messages %>
+    </div>
+  <% } %>
+<div class="container-fluid btn-light p-5">
+  <h1>Please login</h1>
+    <form method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Username:</label>
+          <input type="email" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username">
+          <small id="emailHelp" class="form-text text-muted">Please note that your username is the email address you used to register with us.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password:</label>
+          <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <br>
+        <div class="form-group">
+        New? <a href="/register">Register</a> with us!
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Login">
+        <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+      </form>
+</div>
+
+   
+<%- include ../partials/bottom_nav.ejs %>
+<%- include ../partials/footer.ejs %>
