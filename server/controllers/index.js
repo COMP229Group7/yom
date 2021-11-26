@@ -3,6 +3,8 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
+const { Question } = require('../models/question');
+const { Survey } = require('../models/survey');
 
 let userModel = require('../models/user');
 let User = userModel.User;
@@ -110,3 +112,47 @@ module.exports.performLogout = (req, res, next) => {
 // module.exports.processSurvey1Page = (req, res, next) => {
 
 // }
+
+module.exports.processSurvey1Page = (req, res, next) => {
+    console.log("In process survey : ", req.body.question1)
+    let newQuestion = Question({
+        surveyQuestion: req.body.question1,
+        answersList: [{answer: req.body.q1op1}, {answer: req.body.q1op2}]
+    });
+    console.log("Question object created");
+    let newSurvey = Survey({
+        questions: [newQuestion],
+        active: true,
+        // userId: {
+        //     type: mongoose.Schema.Types.ObjectId,
+        //     ref: 'User'
+        // },
+        title: "Survey 1",
+        description: "Coronavirus Leadership Check-in"
+    })
+    console.log("Survey object created");
+    // console.log(newQuestion);
+    // newQuestion.answersList[0].option = req.body.q1op1;
+    // newQuestion.answersList[1].option = req.body.q1op2;
+    console.log(newQuestion);
+    Question.create(newQuestion, (err) => {
+        if (err) {
+            console.log("Error while creating question : " + err);
+        //   } else {
+        //     console.log("redirected")
+        //     res.redirect('/template');
+        //   }
+        }
+    });
+
+    Survey.create(newSurvey, (err) => {
+        
+        if (err) {
+            console.log("Error while creating survey : " + err);
+          } else {
+            console.log("Survey Created")
+            console.log("redirected")
+            res.redirect('/template');
+          }
+    });
+}
