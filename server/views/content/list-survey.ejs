@@ -5,7 +5,16 @@
 
 <div class="container-fluid btn-light p-5">
 <h2> Available Surveys</h2>
-
+<% for (let count = 0; count < surveylist.length; count++) { %>
+  <div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+        <p class="card-text"><%= surveylist[count].title %></td>
+      <a href="/survey-response/<%= surveylist[count]._id %>" class="btn btn-primary">Respond now</a>
+    </div>
+  </div>
+  <% } %>
 </div>
 
 

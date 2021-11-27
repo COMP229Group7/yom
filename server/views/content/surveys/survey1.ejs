@@ -4,11 +4,12 @@
 <%- include ../../partials/login_nav.ejs %>
 
 <div class="container-fluid btn-light p-5">
-
-  <h1 class="display-4">Coronavirus Leadership Check-In</h1><br>
   <form method="POST">
+  <h1 class="display-4">
+    <input type="text" class="form-control" name="surveytitle" value="Coronavirus Leadership Check-In"></h1><br>
     <div class="form-group">
-      <input type="text" class="form-control" name="question1" value="1. How worried are you about the impact of coronavirus on you personally?">
+      <label>1. </label>
+      <input type="text" class="form-control" name="question1" value="How worried are you about the impact of coronavirus on you personally?">
     </div>
     <div class="form-group">
       <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
@@ -22,24 +23,60 @@
         <input type="text" class="form-control" name="q1op2" value="Very worried">
       </label>
     </div>
-    <!-- <div class="form-group">
+    <div class="form-group">
       <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
       <label class="form-check-label" for="radioExample3">
-        Somewhat worried 
+        <input type="text" class="form-control" name="q1op3" value="Somewhat worried"> 
       </label>
     </div>
     <div class="form-group">
       <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
       <label class="form-check-label" for="radioExample3">
-        Not so worried 
+        <input type="text" class="form-control" name="q1op4" value=Not so worried">
       </label>
     </div>
     <div class="form-group">
       <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
       <label class="form-check-label" for="radioExample3">
-        Not at all worried 
+        <input type="text" class="form-control" name="q1op5" value="Not at all worried">
       </label>
-    </div> -->
+    </div>
+
+    <div class="form-group">
+      <label>2. </label>
+      <input type="text" class="form-control" name="question2" value="How are you?">
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+      <label class="form-check-label" for="radioExample1">
+        <input type="text" class="form-control" name="q2op1" value="Extremely worried">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+      <label class="form-check-label" for="radioExample2">
+        <input type="text" class="form-control" name="q2op2" value="Very worried">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q2op3" value="Somewhat worried"> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q2op4" value=Not so worried">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q2op5" value="Not at all worried">
+      </label>
+    </div>
+
     <br>
     <input type="submit" class="btn btn-primary" value="Login">
     <a type="button" class="btn btn-secondary" href="/">Cancel</a>

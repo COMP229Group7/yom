@@ -53,4 +53,6 @@ router.get('/logout', indexController.performLogout);
 
 router.get('/list-survey',indexController.displaySurveyListPage);
 
+router.get('/survey-response/:id',indexController.displayResponsePage);
+
 module.exports = router;

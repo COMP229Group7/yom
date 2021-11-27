@@ -32,6 +32,9 @@ let SurveySchema = mongoose.Schema({
         type: String,
         default: ''
     },
+    template: {
+        type: String
+    }
     // type: {
     //     type: String,
     //     enum: ['1', '2', '3'],
