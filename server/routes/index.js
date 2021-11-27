@@ -30,7 +30,7 @@ router.get('/template', requireAuth, indexController.displayTemplatePage);
 
 router.get('/survey1', indexController.displaySurvey1Page);
 
-// router.post('/survey1', indexController.processSurvey1Page);
+router.post('/survey1', indexController.processSurvey1Page);
 
 router.get('/survey2', indexController.displaySurvey2Page);
 
@@ -52,5 +52,7 @@ router.post('/register', indexController.processRegisterPage);
 router.get('/logout', indexController.performLogout);
 
 router.get('/list-survey',indexController.displaySurveyListPage);
+
+router.get('/survey-response/:id',indexController.displayResponsePage);
 
 module.exports = router;

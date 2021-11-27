@@ -1,0 +1,25 @@
+<%- include ../../partials/header.ejs %>
+
+<%- include ../../partials/top_nav.ejs %>
+<%- include ../../partials/login_nav.ejs %>
+
+<div class="container-fluid btn-light p-5">
+<form method="POST">
+    <h1 class="display-4"><label><%= surveytorespond.title %></label></h1><br>
+    <label>here1 <%= questionstorespond.surveyQuestion %></label>
+    <% for (let count = 0; count < questionstorespond.length; count++) { %>
+        <label>here2</label>
+        <div class="form-group">
+        <label><%= count+1 %>. <%= questionstorespond[count].surveyQuestion%></label>
+        </div>
+        
+    <% } %>
+    <br>
+    <input type="submit" class="btn btn-primary" value="Submit">
+    <a type="button" class="btn btn-secondary" href="/list-survey">Cancel</a>
+</form>
+
+</div>
+
+<%- include ../../partials/bottom_nav.ejs %>
+<%- include ../../partials/footer.ejs %>
