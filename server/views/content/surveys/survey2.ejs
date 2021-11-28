@@ -4,455 +4,203 @@
 <%- include ../../partials/login_nav.ejs %>
 
 <div class="container-fluid btn-light p-5">
-
-  <h1 class="display-4">Customer Satisfaction Survey Template</h1><br>
-
-  <div class="mx-0 mx-sm-auto">
-    <div class="text-left">
-      <p>
-        <strong>1. How likely is it that you would recommend this company to a friend or colleague?</strong>
-      </p>
+  <form method="POST">
+  <h1 class="display-4">
+    <input type="text" class="form-control" name="surveytitle" value="Customer Satisfaction Survey Template"></h1><br>
+    <div class="form-group">
+      <label>1. </label>
+      <input type="text" class="form-control" name="question1" value="Overall, how satisfied or dissatisfied are you with our company?">
     </div>
-    <div class="btn-toolbar justify-content-left" role="toolbar"
-      aria-label="Toolbar with button groups">
-      <div class="btn-group me-2" role="group" aria-label="First group">
-        <button type="button" class="btn btn-light">0</button>
-        <button type="button" class="btn btn-light">1</button>
-        <button type="button" class="btn btn-light">2</button>
-        <button type="button" class="btn btn-light">3</button>
-        <button type="button" class="btn btn-light">4</button>
-        <button type="button" class="btn btn-light">5</button>
-        <button type="button" class="btn btn-light">6</button>
-        <button type="button" class="btn btn-light">7</button>
-        <button type="button" class="btn btn-light">8</button>
-        <button type="button" class="btn btn-light">9</button>
-        <button type="button" class="btn btn-light">10</button>
-      </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+      <label class="form-check-label" for="radioExample1">
+        <input type="text" class="form-control" name="q1op1" value="Very satisfied">
+      </label>
     </div>
-    <!-- <div class="text-end mt-3">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold">2. Overall, how satisfied or dissatisfied are you with our company?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Very satisfied
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Somewhat satisfied 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Neither satisfied nor dissatisfied 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Somewhat dissatisfied 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Very dissatisfied
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class="px-4" action="">
-      <p class="fw-bold">3. Which of the following words would you use to describe our products? Select all that apply.</p>
-
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-        <label class="form-check-label" for="flexCheckDefault">
-          Reliable 
-        </label>
-      </div>
-  
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          High quality 
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Useful 
-        </label>
-      </div>
-
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Unique 
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Good value for money  
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Overpriced  
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          High quality 
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Impractical  
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Ineffective 
-        </label>
-      </div>
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
-        <label class="form-check-label" for="flexCheckDefault2">
-          Poor quality 
-        </label>
-      </div>
-      
-      
-      <!-- Checked checkbox -->
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
-        <label class="form-check-label" for="flexCheckDefault3">
-          Unreliable 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="card-footer text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold">4. How well do our products meet your needs?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Extremely well 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Very well
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Somewhat well  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not so well 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not at all well 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold">5. How would you rate the quality of the product?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Very high quality  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          High quality 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Neither high nor low quality  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Low quality 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Very low quality 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold"> 6. How would you rate the value for money of the product?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Excellent  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Above average 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Average   
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Below average 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Poor 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold"> 7. How responsive have we been to your questions or concerns about our products?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Extremely responsive   
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Very responsive  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Somewhat responsive    
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not so responsive 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not at all responsive 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not applicable 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold"> 8. How long have you been a customer of our company?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          This is my first purchase   
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Less than six months  
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Six months to a year    
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          1 - 2 years 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          3 or more years 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          I haven't made a purchase yet 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-
-  <div class="row col-5">
-    <h4 class="fw-bold text-center mt-3"></h4>
-    <form class=" bg-white px-4" action="">
-      <p class="fw-bold"> 9. How likely are you to purchase any of our products again?</p>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
-        <label class="form-check-label" for="radioExample1">
-          Extremely likely   
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
-        <label class="form-check-label" for="radioExample2">
-          Very likely 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Somewhat likely    
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not so likely 
-        </label>
-      </div>
-      <div class="form-check mb-2">
-        <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
-        <label class="form-check-label" for="radioExample3">
-          Not at all likely 
-        </label>
-      </div>
-    </form>
-    <!-- <div class="text-end">
-      <button type="button" class="btn btn-primary">Submit</button>
-    </div> -->
-  </div>
-
-  <div class="mx-0 mx-sm-auto">
-    <div class="card">
-      <div class="card-body">
-  
-  
-        <form class="px-2" action="">
-          <p class="text-left"><strong>10. Do you have any other comments, questions, or concerns?</strong></p>
-  
-          <!-- Message input -->
-          <div class="form-outline mb-4">
-            <textarea class="form-control" id="form4Example6" rows="4"></textarea>
-          </div>
-        </form>
-      </div>
-      <!-- <div class="card-footer text-end">
-        <button type="button" class="btn btn-primary">Submit</button>
-      </div> -->
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+      <label class="form-check-label" for="radioExample2">
+        <input type="text" class="form-control" name="q1op2" value="Somewhat satisfied ">
+      </label>
     </div>
-  </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q1op3" value="Neither satisfied nor dissatisfied"> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q1op4" value="Somewhat dissatisfied">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q1op5" value="Very dissatisfied">
+      </label>
+    </div>
 
-  <input type="submit" class="btn btn-primary" value="Create">
-  <a type="button" class="btn btn-secondary" href="/template">Cancel</a>
-<!-- </form> -->
+
+    <div class="form-group">
+      <label>2. </label>
+      <input type="text" class="form-control" name="question2" value="Which of the following words would you use to describe our products? Select all that apply.">
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault1" />
+      <label class="form-check-label" for="flexCheckDefault1">
+        <input type="text" class="form-control" name="q2op1" value="Reliable">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault2" />
+      <label class="form-check-label" for="flexCheckDefault2">
+        <input type="text" class="form-control" name="q2op2" value="High quality">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault3" />
+      <label class="form-check-label" for="flexCheckDefaultrs3">
+        <input type="text" class="form-control" name="q2op3" value="Useful"> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault3" />
+      <label class="form-check-label" for="flexCheckDefault3">
+        <input type="text" class="form-control" name="q2op4" value="Unique">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault3" />
+      <label class="form-check-label" for="flexCheckDefault3">
+        <input type="text" class="form-control" name="q2op5" value="Good value for money">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault3" />
+      <label class="form-check-label" for="flexCheckDefault3">
+        <input type="text" class="form-control" name="q2op6" value="Overpriced">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="checkbox" name="exampleForm" id="flexCheckDefault3" />
+      <label class="form-check-label" for="flexCheckDefault3">
+        <input type="text" class="form-control" name="q2op7" value="Unreliable">
+      </label>
+    </div>
+
+
+    <div class="form-group">
+      <label>3. </label>
+      <input type="text" class="form-control" name="question3" value="How well do our products meet your needs?">
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+      <label class="form-check-label" for="radioExample1">
+        <input type="text" class="form-control" name="q3op1" value="Extremely well">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+      <label class="form-check-label" for="radioExample2">
+        <input type="text" class="form-control" name="q3op2" value="Very well">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q3op3" value=" Somewhat well "> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q3op4" value="Not so well">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q3op5" value="Not at all well ">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>4. </label>
+      <input type="text" class="form-control" name="question4" value="How would you rate the quality of the product?">
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+      <label class="form-check-label" for="radioExample1">
+        <input type="text" class="form-control" name="q4op1" value="Very high quality">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+      <label class="form-check-label" for="radioExample2">
+        <input type="text" class="form-control" name="q4op2" value="High quality">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q4op3" value="Neither high nor low quality"> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q4op4" value="Low quality">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q4op5" value="Very low quality">
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>5. </label>
+      <input type="text" class="form-control" name="question5" value="How would you rate the value for money of the product?">
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample1" />
+      <label class="form-check-label" for="radioExample1">
+        <input type="text" class="form-control" name="q5op1" value="Excellent">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample2" />
+      <label class="form-check-label" for="radioExample2">
+        <input type="text" class="form-control" name="q5op2" value="Above average">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q5op3" value="Average"> 
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q5op4" value="Below average">
+      </label>
+    </div>
+    <div class="form-group">
+      <input class="form-check-input" type="radio" name="exampleForm" id="radioExample3" />
+      <label class="form-check-label" for="radioExample3">
+        <input type="text" class="form-control" name="q5op5" value="Poor">
+      </label>
+    </div>
+
+    <br>
+    <input type="submit" class="btn btn-primary" value="Login">
+    <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+  </form>
+  
 </div>
-
 <%- include ../../partials/bottom_nav.ejs %>
 <%- include ../../partials/footer.ejs %>
-
