@@ -11,6 +11,10 @@ import { ListSurveyComponent } from './pages/list-survey/list-survey.component';
 import { Survey1Component } from './pages/surveys/survey1/survey1.component';
 import { Survey2Component } from './pages/surveys/survey2/survey2.component';
 import { Survey3Component } from './pages/surveys/survey3/survey3.component';
+import { BasepageComponent } from './partials/basepage/basepage.component';
+import { LoginNavComponent } from './partials/login-nav/login-nav.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { RegisterComponent } from './pages/auth/register/register.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { Survey3Component } from './pages/surveys/survey3/survey3.component';
     ListSurveyComponent,
     Survey1Component,
     Survey2Component,
-    Survey3Component
+    Survey3Component,
+    BasepageComponent,
+    LoginNavComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
