@@ -1,0 +1,22 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/top_nav.ejs %>
+<%- include ../../partials/login_nav.ejs %>
+
+<div class="container-fluid btn-light p-5">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+        <% for (let count = 0; count < surveylist.length; count++) { %>
+     <div class="col">
+        <div class="card" style="width: 25rem;">
+            <div class="card-body">
+              <p class="card-text"><%=surveylist[count].title%></p>
+              
+            </div>
+          </div>
+            
+         </div>    
+    <% } %>
+</div>
+</div>
+
+<%- include ../../partials/bottom_nav.ejs %>
+<%- include ../../partials/footer.ejs %>

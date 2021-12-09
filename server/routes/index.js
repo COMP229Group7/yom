@@ -32,8 +32,9 @@ router.get('/survey1', indexController.displaySurvey1Page);
 
 router.post('/survey1', indexController.processSurvey1Page);
 
-router.get('/survey2', indexController.displaySurvey2Page);
 
+router.get('/survey2', indexController.displaySurvey2Page);
+router.post('/survey2', indexController.processSurvey1Page);
 router.get('/survey3', indexController.displaySurvey3Page);
 
 /* GET login page. */
@@ -51,8 +52,13 @@ router.post('/register', indexController.processRegisterPage);
 /* GET logout page. */
 router.get('/logout', indexController.performLogout);
 
-router.get('/list-survey',indexController.displaySurveyListPage);
+router.get('/profile', indexController.displayProfilePage);
 
-router.get('/survey-response/:id',indexController.displayResponsePage);
+router.get('/list-survey', indexController.displaySurveyListPage);
+
+router.get('/survey-response/:id', indexController.displayResponsePage);
+
+// router.get('/survey-questions/:id',indexController.displayQuestionsPage);
+router.post('/survey-response/:id', indexController.processResponsePage);
 
 module.exports = router;

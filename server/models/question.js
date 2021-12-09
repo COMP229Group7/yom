@@ -2,7 +2,7 @@
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 
-mongoose.de
+
 let QuestionSchema = mongoose.Schema(
     {
         // surveyLink : {
