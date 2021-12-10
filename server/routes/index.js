@@ -1,9 +1,3 @@
-/**
- * index.js
- * Austin Joyal
- * 301200483
- * Oct 3, 2021
- */
 
 let express = require('express');
 let router = express.Router();
@@ -34,8 +28,10 @@ router.post('/survey1', indexController.processSurvey1Page);
 
 
 router.get('/survey2', indexController.displaySurvey2Page);
-router.post('/survey2', indexController.processSurvey1Page);
+router.post('/survey2', indexController.processSurvey2Page);
+
 router.get('/survey3', indexController.displaySurvey3Page);
+//router.post('/survey3', indexController.processSurvey3Page);
 
 /* GET login page. */
 router.get('/login', indexController.displayLoginPage);
