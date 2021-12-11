@@ -5,13 +5,13 @@
 
 
 <div class="container-fluid btn-light p-5">
+    
  <h1 class="display-4"><label><%= surveytorespond.title %></label></h1><br>
-   <form method="POST">
+  <form method="POST">
        <% for (let count = 0; count < questiontorespond.length; count++) { %>     
         <div class="form-group">
             <label><%= count+1 %>. <%= questiontorespond[count].surveyQuestion%></label>
-            <select name = "chosenAnswers">
-                <% var options =[];%>
+            <select name = "chosenAnswers" class ="form-select" multiple>               
                 <% for (let acount = 0; acount <questiontorespond[count].answersList.length; acount++) { %>
                     <div class="form-group">
                         <option name="q<%=count%>ans<%=acount%>" value='<%= questiontorespond[count].answersList[acount].answer%>'><%= questiontorespond[count].answersList[acount].answer%></option>

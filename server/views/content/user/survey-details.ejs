@@ -1,0 +1,23 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/top_nav.ejs %>
+<%- include ../../partials/login_nav.ejs %>
+
+<div class="container-fluid btn-light p-5">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+     <div class="col">
+        <div class="card" style="width: 60rem;">
+            <div class="card-title" style = "text-align:center"><h3 ><%=surveyDetails[0].title%></h3>            
+            <div class="card-body">
+              <h5 class="card-text">Survey Status:  <span class="badge bg-success"><%=((surveyDetails[0].startDate<=dateNow) && (dateNow<=surveyDetails[0].endDate))%></span></h5>
+              <h5 class="card-text">Survey Start Date:     <span class="badge bg-secondary"><%=surveyDetails[0].startDate%></span></h5>
+              <h5 class="card-text">Survey End Date:    <span class="badge bg-secondary"><%=surveyDetails[0].endDate%></span></h5>
+              
+            </div>
+          </div>
+         </div>    
+</div>
+</div>
+</div>
+
+<%- include ../../partials/bottom_nav.ejs %>
+<%- include ../../partials/footer.ejs %>

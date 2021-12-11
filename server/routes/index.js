@@ -1,9 +1,3 @@
-/**
- * index.js
- * Austin Joyal
- * 301200483
- * Oct 3, 2021
- */
 
 let express = require('express');
 let router = express.Router();
@@ -32,9 +26,12 @@ router.get('/survey1', indexController.displaySurvey1Page);
 
 router.post('/survey1', indexController.processSurvey1Page);
 
+
 router.get('/survey2', indexController.displaySurvey2Page);
+router.post('/survey2', indexController.processSurvey2Page);
 
 router.get('/survey3', indexController.displaySurvey3Page);
+router.post('/survey3', indexController.processSurvey3Page);
 
 /* GET login page. */
 router.get('/login', indexController.displayLoginPage);
@@ -51,8 +48,19 @@ router.post('/register', indexController.processRegisterPage);
 /* GET logout page. */
 router.get('/logout', indexController.performLogout);
 
-router.get('/list-survey',indexController.displaySurveyListPage);
+router.get('/profile', indexController.displayProfilePage);
 
-router.get('/survey-response/:id',indexController.displayResponsePage);
+router.get('/list-survey', indexController.displaySurveyListPage);
+
+router.get('/survey-response/:id', indexController.displayResponsePage);
+
+// router.get('/survey-questions/:id',indexController.displayQuestionsPage);
+router.post('/survey-response/:id', indexController.processResponsePage);
+
+/* GET register page. */
+router.get('/report/:id', indexController.displayReportPage);
+
+/* GET register page. */
+router.get('/survey-details/:id', indexController.displaySurveyDetailsPage);
 
 module.exports = router;
