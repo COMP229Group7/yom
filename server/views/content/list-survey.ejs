@@ -7,11 +7,14 @@
 <div class="container-fluid btn-light p-5">
 <h2> Available Surveys</h2>
 <div class="row row-cols-1 row-cols-md-4 g-4">
- 
+ <%let surveyAvailableCount =0 %>
 <% for (let count = 0; count < surveylist.length; count++) { %>
- <div class="col">
-  <div class="card" style="width: 25rem;">
-        <div class="card-body">
+  <% if((surveylist[count].startDate<=dateNow) && (dateNow<=surveylist[count].endDate)){%>
+    <%surveyAvailableCount =surveyAvailableCount + 1 %>
+  <div class="col">
+    <div class="card" style="width: 25rem;">
+          <div class="card-body">
+           
       
         <p class="card-text"><%= surveylist[count].title %></p>
          <div class="card-footer">
@@ -23,6 +26,11 @@
   </div>
   </div>
   <% } %>
+  <% } %>
+  <% if (surveyAvailableCount ==0){%>
+    <h4> There are no available active surveys!</h4>
+
+  <%}%>
 </div>
 </div>
 

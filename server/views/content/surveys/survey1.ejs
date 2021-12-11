@@ -6,7 +6,16 @@
 <div class="container-fluid btn-light p-5">
   <form method="POST">
   <h1 class="display-4">
+    <h5><span class="badge bg-success">Survey Title </span></h5>
     <input type="text" class="form-control" name="surveytitle" value="Coronavirus Leadership Check-In"></h1><br>
+    <div class="form-group">
+    <label> Start Date: </label>
+    <input type="date" id="start" name="surveyStartDate"  value="2021-12-10"  min="2018-01-01" max="2099-12-31">
+    <label> End Date: </label>
+    <input type="date" id="start" name="surveyEndDate"  value="2021-12-10"  min="2018-01-01" max="2099-12-31">
+  
+  </div>
+  <br>
     <div class="form-group">
       <h5><span class="badge bg-secondary">Question 1</span></h5>
       <input type="text" class="form-control" name="question1" value="How worried are you about the impact of coronavirus on you personally?">
@@ -195,8 +204,8 @@
     </div>
 
     <br>
-    <input type="submit" class="btn btn-primary" value="Submit">
-    <a type="button" class="btn btn-secondary" href="/">Cancel</a>
+    <input type="submit" class="btn btn-primary" value="Create Survey">
+    <a type="button" class="btn btn-secondary" href="/template">Cancel</a>
     <br>
   </form>
   

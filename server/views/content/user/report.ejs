@@ -1,0 +1,22 @@
+<%- include ../../partials/header.ejs %>
+<%- include ../../partials/top_nav.ejs %>
+<%- include ../../partials/login_nav.ejs %>
+
+<div class="container-sm btn-light p-5" style="padding-left: 50px;">
+<div class="row row-cols-1 row-cols-md-1 g-1">
+  
+     <div class="col" style="text-align: center;">
+        <div class="card" style="width: 25rem;">
+        <br>
+            <div class="card-body">
+              <h3 class="card-text"> Response Count  <span class="badge bg-success"><%=responseslist.length%></span></h3>
+              <a type="button" class="btn btn-primary" href = 'mailto:<%=displayName%>?body="Hello <%=contactName%>, Your total number of respondents is <%=responseslist.length%>."&subject="Response Count"'>Send email</a>           
+            </div>
+            <br>
+          </div>
+        </div>    
+  </div>
+</div>
+
+<%- include ../../partials/bottom_nav.ejs %>
+<%- include ../../partials/footer.ejs %>

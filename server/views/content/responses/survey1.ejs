@@ -6,7 +6,7 @@
 
 <div class="container-fluid btn-light p-5">
  <h1 class="display-4"><label><%= surveytorespond.title %></label></h1><br>
-  <form method="POST">
+   <form method="POST">
        <% for (let count = 0; count < questiontorespond.length; count++) { %>     
         <div class="form-group">
             <label><%= count+1 %>. <%= questiontorespond[count].surveyQuestion%></label>

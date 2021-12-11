@@ -9,7 +9,6 @@ let ResponseSchema = mongoose.Schema({
         ref: 'Survey'
     },
     chosenAnswersList: [{
-
         type: String
 
     }],

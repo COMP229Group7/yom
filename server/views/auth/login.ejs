@@ -10,24 +10,26 @@
       <%= messages %>
     </div>
   <% } %>
-<div class="container-fluid btn-light p-5">
-  <h1>Please login</h1>
+<div class="container-sm btn-light p-5">
+  <h1>Sign in</h1>
+  <br>
     <form method="POST">
-        <div class="form-group">
+        <div class="form-group" >
           <label for="exampleInputEmail1">Username:</label>
-          <input type="email" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username">
+          <input style="width: 400px;" type="email" class="form-control" name="username" aria-describedby="emailHelp" placeholder="Enter username">
           <small id="emailHelp" class="form-text text-muted">Please note that your username is the email address you used to register with us.</small>
         </div>
+        <br>
         <div class="form-group">
           <label for="exampleInputPassword1">Password:</label>
-          <input type="password" class="form-control" name="password" placeholder="Password">
+          <input  style="width: 400px;" type="password" class="form-control" name="password" placeholder="Password">
         </div>
         <br>
         <div class="form-group">
         New? <a href="/register">Register</a> with us!
         </div>
         <br>
-        <input type="submit" class="btn btn-primary" value="Login">
+        <input type="submit" class="btn btn-primary" value="Sign in">
         <a type="button" class="btn btn-secondary" href="/">Cancel</a>
       </form>
 </div>

@@ -32,14 +32,16 @@ module.exports.displaySurvey3Page = (req, res, next) => {
 }
 
 module.exports.displaySurveyListPage = (req, res, next) => {
-    // find all books in the books collection
-    Survey.find((err, surveys) => {
+    let date = Date.now();
+    console.log(date)
+    Survey.find( (err, surveys) => {
         if (err) {
             return console.error(err);
         }
         else {
+            
             res.render('content/list-survey', {
-                title: 'Available Surveys', displayName: req.user ? req.user.emailAddress : '', surveylist: surveys
+                title: 'Available Surveys', displayName: req.user ? req.user.emailAddress : '', surveylist: surveys, dateNow:date
             });
         }
     });
@@ -126,7 +128,7 @@ module.exports.performLogout = (req, res, next) => {
 // }
 
 module.exports.processSurvey1Page = (req, res, next) => {
-    console.log("In process survey : ", req.body.question1)
+    console.log("In process survey 1: ", req.body.question1)
     let newQuestion1 = Question({
         surveyQuestion: req.body.question1,
         answersList: [
@@ -181,6 +183,8 @@ module.exports.processSurvey1Page = (req, res, next) => {
     let newSurvey = Survey({
         questions: [newQuestion1, newQuestion2, newQuestion3, newQuestion4, newQuestion5],
         active: true,
+        startDate: req.body.surveyStartDate,
+        endDate: req.body.surveyEndDate,
         userId: req.user,
         title: req.body.surveytitle,
         description: "Coronavirus Leadership Check-in",
@@ -252,7 +256,7 @@ module.exports.processSurvey1Page = (req, res, next) => {
 }
 
 module.exports.processSurvey2Page = (req, res, next) => {
-    console.log("In process survey : ", req.body.question1)
+    console.log("In process survey 2: ", req.body.question1)
     let newQuestion1 = Question({
         surveyQuestion: req.body.question1,
         answersList: [
@@ -279,10 +283,12 @@ module.exports.processSurvey2Page = (req, res, next) => {
     let newSurvey = Survey({
         questions: [newQuestion1, newQuestion2, newQuestion3],
         active: true,
+        startDate: req.body.surveyStartDate,
+        endDate: req.body.surveyEndDate,
         userId: req.user,
         title: req.body.surveytitle,
         description: "Customer Satisfaction Survey",
-        template: "1"
+        template: "2"
     })
     console.log("Survey object created");
     // console.log(newQuestion);
@@ -316,6 +322,100 @@ module.exports.processSurvey2Page = (req, res, next) => {
             //   }
         }
     });
+
+    Survey.create(newSurvey, (err) => {
+
+        if (err) {
+            console.log("Error while creating survey : " + err);
+        } else {
+            console.log("Survey Created")
+            console.log("redirected")
+            console.log(req.user);
+            res.redirect('/template');
+        }
+    });
+
+}
+
+module.exports.processSurvey3Page = (req, res, next) => {
+    console.log("In process survey 3 : ", req.body.question1)
+    let newQuestion1 = Question({
+        surveyQuestion: req.body.question1,
+        answersList: [
+            { answer: req.body.q1op1 },
+            { answer: req.body.q1op2 },
+            { answer: req.body.q1op3 },
+            { answer: req.body.q1op4 }, 
+            { answer: req.body.q1op5 },
+            { answer: req.body.q1op6 },
+            { answer: req.body.q1op7 },
+            
+        ]
+    });
+    let newQuestion2 = Question({
+        surveyQuestion: req.body.question2,
+        answersList: [
+            { answer: req.body.q2op1 },
+            { answer: req.body.q2op2 },
+            { answer: req.body.q2op3 },
+            { answer: req.body.q2op4 },
+            { answer: req.body.q2op5 },
+            { answer: req.body.q2op6 },
+            { answer: req.body.q2op7 },
+        ]
+    });
+    // let newQuestion3 = Question({
+    //     surveyQuestion: req.body.question3,
+    //     answersList: [
+    //         { answer: req.body.q3op1 },
+    //         { answer: req.body.q3op2 }
+    //     ]
+    // });
+
+    console.log("Question object created");
+   
+    let newSurvey = Survey({
+        questions: [newQuestion1, newQuestion2],
+        active: true,
+        startDate: req.body.surveyStartDate,
+        endDate: req.body.surveyEndDate,
+        userId: req.user,
+        title: req.body.surveytitle,
+        description: "Customer Satisfaction Survey",
+        template: "3"
+    })
+    console.log("Survey object created");
+    // console.log(newQuestion);
+    // newQuestion.answersList[0].option = req.body.q1op1;
+    // newQuestion.answersList[1].option = req.body.q1op2;
+    // console.log(newQuestion1);
+    Question.create(newQuestion1, (err) => {
+        if (err) {
+            console.log("Error while creating question1 : " + err);
+            //   } else {
+            //     console.log("redirected")
+            //     res.redirect('/template');
+            //   }
+        }
+    });
+    Question.create(newQuestion2, (err) => {
+        if (err) {
+            console.log("Error while creating question2 : " + err);
+            //   } else {
+            //     console.log("redirected")
+            //     res.redirect('/template');
+            //   }
+        }
+    });
+    // Question.create(newQuestion3, (err) => {
+    //     if (err) {
+    //         console.log("Error while creating question3 : " + err);
+    //         //   } else {
+    //         //     console.log("redirected")
+    //         //     res.redirect('/template');
+    //         //   }
+    //     }
+    // });
 
     Survey.create(newSurvey, (err) => {
 
@@ -456,8 +556,9 @@ module.exports.processResponsePage = (req, res, next) => {
         }
     });
 }
+
 module.exports.displayProfilePage = (req, res, next) => {
-    console.log("In process profile page: ", req.params)
+    console.log("In display profile page: ", req.params)
     Survey.find().where('userId').equals(req.user['_id']).exec((err, surveys) => {
         if (err) {
             console.log("Error while finding survey question : " + err);
@@ -465,7 +566,41 @@ module.exports.displayProfilePage = (req, res, next) => {
         } else {
             console.log(surveys)
             res.render('content/user/profile', {
-                title: 'Profile', displayName: req.user ? req.user.emailAddress : '', surveylist: surveys
+                title: 'Profile', displayName: req.user ? req.user.emailAddress : '', surveylist: surveys, dateNow:Date.now()
+
+            })
+        }
+    });
+}
+
+module.exports.displayReportPage = (req, res, next) => {
+    console.log("In display report page: ", req.user)
+    Response.find().where('surveyID').equals(req.params.id).exec((err, responses) => {
+        if (err) {
+            console.log("Error while finding survey question : " + err);
+
+        } else {
+            console.log(responses)
+            res.render('content/user/report', {
+                title: 'Report', displayName: req.user ? req.user.emailAddress : '', responseslist: responses, 
+                contactName: req.user ? req.user.contactName : ''
+
+            })
+        }
+    });
+}
+
+
+module.exports.displaySurveyDetailsPage = (req, res, next) => {
+    console.log("In display survey details page: ", req.params)
+    Survey.find().where('_id').equals(req.params.id).exec((err, surveys) => {
+        if (err) {
+            console.log("Error while finding survey details : " + err);
+
+        } else {
+            console.log(surveys);
+            res.render('content/user/survey-details', {
+                title: 'Survey Details', displayName: req.user ? req.user.emailAddress : '', surveyDetails: surveys, dateNow: Date.now()
 
             })
         }
